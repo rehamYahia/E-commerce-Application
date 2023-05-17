@@ -27,66 +27,60 @@ private val ICON_SIZE = 24.dp
 fun basicScreen(navController: NavController)
 {
 
-
-
-
-    
     Box(modifier = Modifier
         .fillMaxSize()
         .background(colorResource(id = R.color.white))
-
     )
-
     {
-        NavBar()
+        //NavBar()
 
         }
         
     }
 
-@Preview(group = "Main", name = "Bottom bar - animated")
-@Composable
-fun NavBar()
-{
-    val navController = rememberNavController()
-
-
-    Scaffold( bottomBar ={
-        //BottomNavBar2()
-        AppButtomNavigation(navController,buttomNavigationItems)
-                         }
-
-    ) {
-        NavHost(navController = navController, startDestination = ButtomScreen.Home.route ) {
-            composable(ButtomScreen.Home.route)
-            {
-                homeScreen(navController)
-            }
-            composable(ButtomScreen.Cart.route)
-            {
-                cartScreen(navController)
-
-            }
-
-            composable(ButtomScreen.Favourit.route)
-            {
-                favouritScreen(navController)
-
-            }
-
-            composable(ButtomScreen.Profile.route)
-            {
-                personScreen(navController)
-
-            }
-        }
-    }
-
-    //Surface() {
-    //    BottomNavBar2()
-   // }
-
-}
+//@Preview(group = "Main", name = "Bottom bar - animated")
+//@Composable
+//fun NavBar()
+//{
+//    val navController = rememberNavController()
+//
+//
+//    Scaffold( bottomBar ={
+//        //BottomNavBar2()
+//        AppButtomNavigation(navController,buttomNavigationItems)
+//                         }
+//
+//    ) {
+//        NavHost(navController = navController, startDestination = ButtomScreen.Home.route ) {
+//            composable(ButtomScreen.Home.route)
+//            {
+//                homeScreen(navController)
+//            }
+//            composable(ButtomScreen.Cart.route)
+//            {
+//                cartScreen(navController)
+//
+//            }
+//
+//            composable(ButtomScreen.Favourit.route)
+//            {
+//                favouritScreen(navController)
+//
+//            }
+//
+//            composable(ButtomScreen.Profile.route)
+//            {
+//                personScreen(navController)
+//
+//            }
+//        }
+//    }
+//
+//    //Surface() {
+//    //    BottomNavBar2()
+//   // }
+//
+//}
 
 @Composable
 fun AppButtomNavigation(navController: NavController, bottomNavigationItems: Array<ButtomScreen>)
